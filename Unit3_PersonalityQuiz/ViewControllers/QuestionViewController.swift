@@ -11,94 +11,41 @@ class QuestionViewController: UIViewController {
     
     // MARK: - variables
     var questionIndex = 0
-    let view1: UIView = UIView()
+    let singleAnserView = SignleAnswerView()
+
     let view2: UIView = UIView()
     let view3: UIView = UIView()
     var answersChosen: [Answer] = []
     var slider: UISlider = UISlider()
     var index: Int = 0
     
-    var  questions: [Question] = [
-        Question(
-            text: "Which food do you like the most?",
-            type: .Single,
-            answers: [
-                Answer(text: "Steak", type: .dog),
-                Answer(text: "Fish", type: .cat),
-                Answer(text: "Carrots", type: .rabbit),
-                Answer(text: "Corn", type: .turtle)
-            ]
-        ),
-        Question(
-            text: "Which activities do you enjoy?",
-            type: .multiple,
-            answers: [
-                Answer(text: "Swimming", type: .turtle),
-                Answer(text: "Sleeping", type: .cat),
-                Answer(text: "Cuddling", type: .rabbit),
-                Answer(text: "Eating", type: .dog)
-            ]
-        ),
-        Question(
-            text: "How much do you enjoy car rides?",
-            type: .ranged,
-            answers: [
-                Answer(text: "I dislike them", type: .cat),
-                Answer(text: "I get a little nervous", type: .rabbit),
-                Answer(text: "I barely notice them", type: .turtle),
-                Answer(text: "I love them", type: .dog)
-            ]
-        )]
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        setupSingleAnswer()
+ 
         questionIndex = 0
         index = 0
         updateUI()
     }
     
-    // MARK: - Single-Answer View set up
-    func setUpView1(){
-        let view1 = UIView()
-        view.addSubview(view1)
-        view1.backgroundColor = .white
-        view1.matchParent()
-
-        let question1 = createQuestionLabel(question:questions[0].text)
-        view1.addSubview(question1)
-        question1.questionLabelConstraint()
-
-        let btn1 = createButton(answer: questions[0].answers[0].text)
-        let btn2 = createButton(answer: questions[0].answers[1].text)
-        let btn3 = createButton(answer: questions[0].answers[2].text)
-        let btn4 = createButton(answer: questions[0].answers[3].text)
+    func setupSingleAnswer(){
+        view.addSubview(singleAnserView)
+        singleAnserView.setUpView1()
+        singleAnserView.matchParent()
         
-        btn1.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
-        btn1.tag = 1
-        btn2.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
-        btn2.tag = 2
-        btn3.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
-        btn3.tag = 3
-        btn4.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
-        btn4.tag = 4
-
-        let singleStackView = UIStackView(arrangedSubviews: [btn1,btn2,btn3,btn4])
-        singleStackView.axis = .vertical
-        singleStackView.alignment = .center
-        singleStackView.distribution = .fillEqually
-        singleStackView.spacing = 20
-        singleStackView.translatesAutoresizingMaskIntoConstraints = false
-
-        btn1.singleViewButtonConstraint()
-        btn2.singleViewButtonConstraint()
-        btn3.singleViewButtonConstraint()
-        btn4.singleViewButtonConstraint()
-
-        view1.addSubview(singleStackView)
-        singleStackView.singleStackViewConstraint(label: question1)
+        singleAnserView.btn1.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
+        singleAnserView.btn2.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
+        singleAnserView.btn3.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
+        singleAnserView.btn4.addTarget(self, action: #selector(singleAnswerButtonPressed(_:)), for: .touchUpInside)
+        singleAnserView.btn1.tag = 1
+        singleAnserView.btn2.tag = 2
+        singleAnserView.btn3.tag = 3
+        singleAnserView.btn4.tag = 4
     }
-    
+
     @objc
     func singleAnswerButtonPressed(_ sender: UIButton){
         let currentAnswers = questions[questionIndex].answers                   //options for answers
@@ -258,12 +205,13 @@ class QuestionViewController: UIViewController {
 
         switch questionIndex {
         case 0:
-            setUpView1()
+            view2.isHidden = true
+            view3.isHidden = true
         case 1:
-            view1.isHidden = true
+            singleAnserView.isHidden = true
             setUpView2()
         case 2:
-            view1.isHidden = true
+            singleAnserView.isHidden = true
             view2.isHidden = true
             setUpView3()
         default:

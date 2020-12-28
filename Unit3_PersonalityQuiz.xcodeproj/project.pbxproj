@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48720585259954C50092E30B /* SignleAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48720584259954C50092E30B /* SignleAnswerView.swift */; };
 		AE491C1A25985B3E00D2E40C /* CreateComponentFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE491C1925985B3E00D2E40C /* CreateComponentFunc.swift */; };
 		AEA1962A25941C71007DDB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA1962925941C71007DDB65 /* AppDelegate.swift */; };
 		AEA1962C25941C71007DDB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA1962B25941C71007DDB65 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48720584259954C50092E30B /* SignleAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignleAnswerView.swift; sourceTree = "<group>"; };
 		AE491C1925985B3E00D2E40C /* CreateComponentFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComponentFunc.swift; sourceTree = "<group>"; };
 		AEA1962625941C71007DDB65 /* Unit3_PersonalityQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit3_PersonalityQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA1962925941C71007DDB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48720583259954510092E30B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48720584259954C50092E30B /* SignleAnswerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AE491C1C25985C1100D2E40C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 			children = (
 				AEA1962925941C71007DDB65 /* AppDelegate.swift */,
 				AEA1962B25941C71007DDB65 /* SceneDelegate.swift */,
+				48720583259954510092E30B /* View */,
 				AE491C1C25985C1100D2E40C /* ViewControllers */,
 				AE491C1925985B3E00D2E40C /* CreateComponentFunc.swift */,
 				AEF021C625954AC5003C5D06 /* UIView+CustomConstraintLayout.swift */,
@@ -163,6 +174,7 @@
 				AEF021C725954AC5003C5D06 /* UIView+CustomConstraintLayout.swift in Sources */,
 				AEA196432594210E007DDB65 /* QuestionViewController.swift in Sources */,
 				AEA1962C25941C71007DDB65 /* SceneDelegate.swift in Sources */,
+				48720585259954C50092E30B /* SignleAnswerView.swift in Sources */,
 				AEA1964625942120007DDB65 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
