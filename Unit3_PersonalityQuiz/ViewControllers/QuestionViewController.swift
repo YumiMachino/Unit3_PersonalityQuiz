@@ -19,6 +19,10 @@ class QuestionViewController: UIViewController {
     var slider: UISlider = UISlider()
     var index: Int = 0
     
+
+    let singleView: UIView = SingleAnswerView()
+    
+
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
