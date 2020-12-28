@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE491C1A25985B3E00D2E40C /* CreateComponentFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE491C1925985B3E00D2E40C /* CreateComponentFunc.swift */; };
+		AE9D7AE3259954E100DF179F /* SingleAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D7AE2259954E100DF179F /* SingleAnswerView.swift */; };
 		AEA1962A25941C71007DDB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA1962925941C71007DDB65 /* AppDelegate.swift */; };
 		AEA1962C25941C71007DDB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA1962B25941C71007DDB65 /* SceneDelegate.swift */; };
 		AEA1962E25941C71007DDB65 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA1962D25941C71007DDB65 /* IntroductionViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		AE491C1925985B3E00D2E40C /* CreateComponentFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComponentFunc.swift; sourceTree = "<group>"; };
+		AE9D7AE2259954E100DF179F /* SingleAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAnswerView.swift; sourceTree = "<group>"; };
 		AEA1962625941C71007DDB65 /* Unit3_PersonalityQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit3_PersonalityQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA1962925941C71007DDB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA1962B25941C71007DDB65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		AEA1961D25941C71007DDB65 = {
 			isa = PBXGroup;
 			children = (
+				AE9D7AE2259954E100DF179F /* SingleAnswerView.swift */,
 				AEA1962825941C71007DDB65 /* Unit3_PersonalityQuiz */,
 				AEA1962725941C71007DDB65 /* Products */,
 			);
@@ -164,6 +167,7 @@
 				AEA196432594210E007DDB65 /* QuestionViewController.swift in Sources */,
 				AEA1962C25941C71007DDB65 /* SceneDelegate.swift in Sources */,
 				AEA1964625942120007DDB65 /* ResultsViewController.swift in Sources */,
+				AE9D7AE3259954E100DF179F /* SingleAnswerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
